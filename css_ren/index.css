@@ -1,0 +1,575 @@
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 390px 40px auto 450px;
+    overflow-x: hidden;
+}
+
+.header {
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header .input-box {
+  position: relative;
+  flex: 1;
+  margin: 10px 0px 5px 20px;
+
+}
+
+.header .input-icon {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  left: 0.8rem;
+  color: #797979;
+  cursor: pointer;
+}
+
+.header .input-icon:hover {
+  color: #333;
+}
+
+.header .input-serch {
+  width: 100%;
+  padding: 8px 10px 8px 35px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #EEEEEE;
+  font-family: Yu Gothic UI;
+}
+
+.header .input-serch:focus {
+  outline: none;
+  background-color: white;
+  border: 1px solid #ddd
+
+}
+
+.header .search-icon-right {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  right: 0.8rem;
+  color: #797979;
+  cursor: pointer;
+  font-size:18px
+}
+
+.header .search-icon-right:hover {
+  color: #333;
+}
+
+.header .header-group {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.header-group .span-Unsplash {
+
+  width: 160px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+
+  margin-left: 20px;
+  color: #000;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header .header-group .span-login {
+  width: 60px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+
+  margin-left: 20px;
+  color: #888;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header .header-group .span-login:hover {
+  color: #000;
+}
+
+
+.header .header-group .input-button {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: white;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.header .header-group .input-button:hover {
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: Yu Gothic UI;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ----------------------------- */
+
+/* プロフィール */
+
+.profile {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 4rem auto 5rem;
+}
+
+/* 
+img {
+  max-width: 100%;
+} */
+
+.profile img {
+  width: 150px; /* 画像のサイズを指定（必要に応じて調整） */
+  height: 150px;
+  object-fit: cover; /* 画像を枠に合わせてトリミング */
+  border-radius: 50%;
+  justify-self: center; /* グリッド内で左右中央に配置 */
+  /* align-self: center;   グリッド内で上下中央に配置（必要なら） */
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.profile .my-info {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.profile .title-row {
+  display: flex;
+}
+
+.profile .title {
+  font-size: 2.5rem;
+  font-family: Segoe UI;
+  font-weight: 500;
+}
+
+.profile .btn {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: white;
+  border-radius: 5px;
+  border: 1.5px solid #bbb;
+  color: #777;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+
+  /* -webkit-appearance: none;
+  appearance: none; */
+  height: 30px;
+  width: 40px;
+}
+
+.profile .btn:hover {
+  border: 1.5px solid #444;
+  color: #222;
+}
+.profile .detail {
+  margin-top: 1.5rem;
+  font-family: Segoe UI;
+  
+}
+
+.profile .link {
+  display: inline-block;
+  /* background-color: #888; */
+  /* margin-top: 1.5rem; */
+  cursor: pointer;
+  color: #999;
+  font-family: Yu Gothic UI;
+
+  
+}
+
+.profile .link:hover {
+  color: #222;
+}
+
+.profile .name {
+  width: 150px;
+}
+
+.fa-compass {
+  margin: 1.4rem 0.8rem 0 0;
+  font-size: 0.8rem;
+}
+
+.fa-circle-user {
+  margin: 1.4rem 0.8rem 0 0;
+  font-size: 0.8rem;
+}
+
+.fa-square-caret-down {
+  position: relative;
+  top: 3px;
+  left: 6px;
+}
+
+.profile .favorite {
+  font-family: Yu Gothic UI;
+  color: #222;
+  margin-top: 1.8rem;
+}
+
+.profile .favorite-btn {
+  /* appearance: none;
+  -webkit-appearance: none; */
+  padding-right: 8px;
+  padding-left: 8px;
+  background-color: #eee;
+  border-radius: 5px;
+  border: none;
+  /* border: 1.5px solid #bbb; */
+  color: #777;
+  margin-right: 0.3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  /* position: relative;
+  top: 3px; */
+
+  font-family: Yu Gothic UI;
+
+  /* -webkit-appearance: none;
+  appearance: none; */
+  height: 30px;
+  /* width: 40px; */
+}
+
+.profile .favorite-btn:hover {
+  /* color: #222; */
+  background-color: #ddd;
+}
+
+.tab {
+  display: flex;
+  gap: 2rem;
+  /* margin-left: 20px; */
+  padding-left: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  /* height: 2rem; */
+}
+
+.tab .item {
+  cursor: pointer;
+  color: #999;
+  font-family: Yu Gothic UI;
+  font-size: 0.8rem;
+
+}
+
+.tab .item:hover {
+  border-bottom: 3px solid #333;
+  color: #222;
+
+}
+
+.tab i {
+  margin-right: 0.5rem;
+}
+
+.tab .item-num {
+  margin-left: 0.3rem;
+}
+
+/* === Masonryレイアウト === */
+
+
+.main {
+  /* background-color: rgb(240, 204, 244) */
+  /* width: fit-content;
+  margin-left: auto;
+  margin-right: auto; */
+  /* display: flex;
+  justify-content: center; */
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@media (max-width: 1300px) {
+  .main { width: 100%; }
+}
+
+
+.profile-gallery {
+  column-count: 3; /* ← 列数を指定。画面幅に応じて変えると◎ */
+  column-gap: 1.5rem; /* 列間のすき間 */
+  padding: 58px 20px;
+  /* padding: 58px 0; */
+
+
+  /* text-align: justify; */
+  /* width: fit-content; */
+  /* overflow-x: hidden; */
+
+}
+
+@media (max-width: 1300px) {
+  .profile-gallery { column-count: 2; }
+}
+
+@media (max-width: 800px) {
+  .profile-gallery { column-count: 1; }
+}
+
+
+
+
+.gallery-item {
+  display: inline-block; /* columnレイアウトではinline-blockが必須 */
+  margin-bottom: 1.5rem;
+  /* padding-bottom: 30pc/; */
+  /* width: 1200px; */
+  /* width: 100%; */
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  /* height: auto; */
+  /* display: block; */
+  /* transition: transform 0.3s ease; */
+}
+
+/* オーバーレイの例（必要なら） */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+  opacity: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+  cursor: zoom-in;
+}
+
+
+/* オーバーレイの例（必要なら） */
+.overlay2 {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1.5px solid #bbb;
+  color: #777;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 2.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+
+
+/* オーバーレイの例（必要なら） */
+.overlay3 {
+  position: absolute;
+  top: 1.2rem;
+  right: 4.2rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1.5px solid #bbb;
+  color: #777;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 2.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* オーバーレイの例（必要なら） */
+.overlay4 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.overlay4 img {
+  border-radius: 50%;
+}
+
+/* オーバーレイの例（必要なら） */
+.overlay5 {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 4rem;
+  color: #ddd;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay5:hover {
+  color: white;
+}
+
+/* オーバーレイの例（必要なら） */
+.overlay6 {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 1.5px solid #bbb;
+  color: #777;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 2.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+
+/* ▼ ツールチップ（疑似要素で作成） */
+.tool-tip::after {
+  content: attr(data-tooltip); /* ← data-tooltip の内容を表示 */
+  position: absolute;
+  bottom: 120%; /* ボタンの上に表示 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 8px;
+  /* border-radius: 5px; */
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none; /* マウスイベントを拾わない */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-family: Yu Gothic UI;
+}
+
+/* ▼ ホバー時に表示 */
+.tool-tip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px); /* 少し浮き上がるアニメーション */
+}
+
+.icon-hover:hover {
+  color: #222;
+}
+
+
+.gallery-item:hover .overlay
+,.gallery-item:hover .overlay2
+,.gallery-item:hover .overlay3
+,.gallery-item:hover .overlay4
+,.gallery-item:hover .overlay5
+,.gallery-item:hover .overlay6
+{
+  opacity: 1;
+}
+
+/* ----------------------------- */
+
+/* フッター */
+
+.footer {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1300px) {
+  .footer { width: 100%; }
+}
+
+.footer .text {
+  /* margin-left: 20px; */
+  font-size: 1.5rem;
+  font-family: Yu Gothic UI;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer .favorite-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+
+.footer .favorite-btn {
+  font-family: Yu Gothic UI;
+  color: #777;
+  background-color: #eee;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.footer .favorite-btn:hover {
+  color: #222;
+  background-color: #ddd;
+}
+
+.footer .footer-btn {
+  margin-top: 8rem;
+  /* display: flex; */
+  /* justify-content: ceneter; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+
+}
+
+.footer .footer-text {
+  margin-top: 1rem;
+  /* display: flex; */
+  /* justify-content: ceneter; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  font-family: Yu Gothic UI;
+}

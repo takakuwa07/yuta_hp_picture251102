@@ -94,6 +94,7 @@
   font-family: Yu Gothic UI;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header .header-group .span-login:hover {
